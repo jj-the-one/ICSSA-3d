@@ -1523,7 +1523,9 @@ PrefabInstance:
       value: Goal Post (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2251839798084318870, guid: 74e5e811a38e42e4b861f9ec9a3e5492, type: 3}
+    - {fileID: 484128319265348359, guid: 74e5e811a38e42e4b861f9ec9a3e5492, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e5e811a38e42e4b861f9ec9a3e5492, type: 3}
