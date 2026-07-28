@@ -443,6 +443,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77d0b00bd45ddc84eae1606b4748ffe4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 989051101}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77d0b00bd45ddc84eae1606b4748ffe4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 989051102}
   m_SourcePrefab: {fileID: 100100000, guid: 77d0b00bd45ddc84eae1606b4748ffe4, type: 3}
 --- !u!1 &891940698
 GameObject:
@@ -619,10 +622,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010d0f9b42ae61d48aac0de2c0d1f1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnusCoefficient: 0.05
+  magnusCoefficient: 3
   initialSpinSpeed: 1
-  spinDamping: 0.6
-  minSpeedToCurve: 0.5
+  spinDamping: 1
+  minSpeedToCurve: 0.8
+--- !u!114 &989051102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989051095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfd023b79119cd4aafa37e56f16d47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 989051100}
+  aimCamera: {fileID: 0}
+  kickAxis: {x: 0, y: 0, z: 1}
+  aimPlaneDistance: 10
+  isAiming: 0
+  directionConfirmed: 0
+  originalDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &999708605
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +656,7 @@ GameObject:
   - component: {fileID: 999708606}
   - component: {fileID: 999708608}
   - component: {fileID: 999708607}
+  - component: {fileID: 999708609}
   m_Layer: 5
   m_Name: Big Box
   m_TagString: Untagged
@@ -699,6 +722,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999708605}
   m_CullTransparentMesh: 1
+--- !u!114 &999708609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999708605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b3b7b16eb21d645a9206e0de375362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleRect: {fileID: 999708606}
+  handle: {fileID: 375771792}
+  uiCamera: {fileID: 0}
 --- !u!1 &1268886049
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +746,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268886050}
-  - component: {fileID: 1268886051}
   - component: {fileID: 1268886052}
   m_Layer: 0
   m_Name: Battle Controller
@@ -732,25 +769,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1268886051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268886049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddfd023b79119cd4aafa37e56f16d47a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 989051100}
-  aimCamera: {fileID: 181875236}
-  kickAxis: {x: 0, y: 0, z: 1}
-  aimPlaneDistance: 10
-  isAiming: 0
-  directionConfirmed: 0
-  originalDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &1268886052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,12 +781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3119019bdf58dee4fb125761b80b0dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kickDirection: {fileID: 1268886051}
+  kickDirection: {fileID: 989051102}
   ballSpin: {fileID: 989051101}
   ballRigidbody: {fileID: 989051097}
   powerSlider: {fileID: 1312962885}
   kickButton: {fileID: 1513825177}
-  maxLaunchSpeed: 80
+  maxLaunchSpeed: 100
 --- !u!1 &1312962883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1500,6 @@ GameObject:
   - component: {fileID: 1972348641}
   - component: {fileID: 1972348640}
   - component: {fileID: 1972348639}
-  - component: {fileID: 1972348643}
   m_Layer: 5
   m_Name: Battle Canvas
   m_TagString: Untagged
@@ -1575,21 +1592,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1972348643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972348638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b3b7b16eb21d645a9206e0de375362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circleRect: {fileID: 999708606}
-  handle: {fileID: 375771792}
-  uiCamera: {fileID: 0}
 --- !u!1 &2118694679
 GameObject:
   m_ObjectHideFlags: 0
