@@ -1610,9 +1610,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kickAxis: {x: 0, y: 0, z: 1}
   moveRange: 3
-  baseMoveSpeed: 10
+  baseMoveSpeed: 15
   speedPerGoal: 1
-  baseTrackingRange: 10
+  baseTrackingRange: 15
   rangePerGoal: 0.5
 --- !u!1 &1967471773
 GameObject:
