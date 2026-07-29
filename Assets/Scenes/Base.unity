@@ -2710,7 +2710,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e2bec36f563b643bfcacb625ba3a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefabs: []
+  explosionPrefabs:
+  - {fileID: 5367978124743597531, guid: c92f34a05ad69814ab379a90227f7eaf, type: 3}
+  - {fileID: 5367978124743597531, guid: c92f34a05ad69814ab379a90227f7eaf, type: 3}
+  - {fileID: 5367978124743597531, guid: c92f34a05ad69814ab379a90227f7eaf, type: 3}
   pieceCount: 8
   pieceSpeed: 3
   pieceLifetime: 1.5
