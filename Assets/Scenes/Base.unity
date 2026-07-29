@@ -1349,7 +1349,7 @@ MonoBehaviour:
   powerSlider: {fileID: 1312962885}
   kickButton: {fileID: 1513825177}
   maxLaunchSpeed: 90
-  kickDelay: 1
+  kickDelay: 0.5
 --- !u!1 &1312962883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,9 +2711,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefabs:
-  - {fileID: 5367978124743597531, guid: c92f34a05ad69814ab379a90227f7eaf, type: 3}
-  - {fileID: 5367978124743597531, guid: c92f34a05ad69814ab379a90227f7eaf, type: 3}
-  - {fileID: 5367978124743597531, guid: c92f34a05ad69814ab379a90227f7eaf, type: 3}
+  - {fileID: 7662209481156444547, guid: a8b6246f9e2c1554abe792b1b0fbd9c1, type: 3}
+  - {fileID: 7662209481156444547, guid: aa48c24bf20e30547843d5fb07682c92, type: 3}
+  - {fileID: 7662209481156444547, guid: 04badf0654cc0ac4baf3dc465fdb5953, type: 3}
   pieceCount: 8
   pieceSpeed: 3
   pieceLifetime: 1.5
