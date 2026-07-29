@@ -24,4 +24,9 @@ public class SceneManager67 : MonoBehaviour
         PlayerInventory.Instance?.ResetProgress();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
+
+    public void RestartGame(){
+        PlayerInventory.Instance?.ResetProgress();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Instructions");
+    }
 }
