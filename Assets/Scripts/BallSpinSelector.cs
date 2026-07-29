@@ -11,7 +11,7 @@ public class BallSpinSelector : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] private RectTransform handle; // marker showing the chosen spot
     [SerializeField] private Camera uiCamera; // leave empty for Screen Space - Overlay
 
-    public Vector2 SpinOffset { get; private set; } // -1..1 per axis, x = right, y = up
+    public Vector2 SpinOffset { get; private set; }
 
     void Awake(){
         Instance = this;
