@@ -1674,9 +1674,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kickAxis: {x: 0, y: 0, z: 1}
-  moveRange: 10
-  baseMoveSpeed: 18
-  speedPerGoal: 1
+  moveRange: 16
+  baseMoveSpeed: 25
+  speedPerGoal: 2
   baseTrackingRange: 15
   rangePerGoal: 0.5
 --- !u!1 &1967471773
