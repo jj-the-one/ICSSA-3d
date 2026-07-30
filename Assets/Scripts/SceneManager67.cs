@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager67 : MonoBehaviour
 {
+    [SerializeField] private AudioSource buttonEffect;
     // Start is called before the first frame update
     void Start(){
         
@@ -28,5 +29,9 @@ public class SceneManager67 : MonoBehaviour
     public void Instructions(){
         PlayerInventory.Instance?.ResetProgress();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Instructions");
+    }
+
+    private void SceneSound(){
+        buttonEffect.PlayOneShot(buttonEffect.clip);
     }
 }
