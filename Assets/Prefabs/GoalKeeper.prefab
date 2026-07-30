@@ -163,6 +163,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fff9e4a4647e72946a7be629515bf73b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a86d3dc56567a948955009ded860c19, type: 2}
+    - target: {fileID: -7511558181221131132, guid: fff9e4a4647e72946a7be629515bf73b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b7fc84dd5257fb24db81ca06e4afce42, type: 2}
+    - target: {fileID: -7511558181221131132, guid: fff9e4a4647e72946a7be629515bf73b, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c632dc4e0662ef046a0b661f6b874e89, type: 2}
+    - target: {fileID: -7511558181221131132, guid: fff9e4a4647e72946a7be629515bf73b, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b7fc84dd5257fb24db81ca06e4afce42, type: 2}
     - target: {fileID: 919132149155446097, guid: fff9e4a4647e72946a7be629515bf73b, type: 3}
       propertyPath: m_Name
       value: Goalie
