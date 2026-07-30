@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class SceneManager67 : MonoBehaviour
 {
     [SerializeField] private AudioSource buttonEffect;
-    [SerializeField] Animator transitionAnim;
     // Start is called before the first frame update
     void Start(){
         

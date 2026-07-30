@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026ed91c0d75f62468ca3b0e26148722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonEffect: {fileID: 0}
+  buttonEffect: {fileID: 3912695074114571243, guid: 98e74e9856c33e34cbd541b0494d0d03, type: 3}
 --- !u!4 &1178542450
 Transform:
   m_ObjectHideFlags: 0
