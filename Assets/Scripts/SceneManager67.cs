@@ -18,20 +18,23 @@ public class SceneManager67 : MonoBehaviour
     }
 
     public void GameSceneOpen(){
+        SceneSound();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Base");
     }
 
     public void RestartGame(){
+        SceneSound();
         PlayerInventory.Instance?.ResetProgress();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
     public void Instructions(){
+        SceneSound();
         PlayerInventory.Instance?.ResetProgress();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Instructions");
     }
 
-    private void SceneSound(){
+    public void SceneSound(){
         buttonEffect.PlayOneShot(buttonEffect.clip);
     }
 }
