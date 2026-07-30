@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneManager67 : MonoBehaviour
 {
     [SerializeField] private AudioSource buttonEffect;
+    [SerializeField] Animator transitionAnim;
     // Start is called before the first frame update
     void Start(){
         
@@ -17,19 +18,26 @@ public class SceneManager67 : MonoBehaviour
         
     }
 
+    IEnumerator SoundDelay(){
+        yield return new WaitForSeconds(1.0f);
+    }
+
     public void GameSceneOpen(){
         SceneSound();
+        StartCoroutine(SoundDelay());
         UnityEngine.SceneManagement.SceneManager.LoadScene("Base");
     }
 
     public void RestartGame(){
         SceneSound();
+        StartCoroutine(SoundDelay());
         PlayerInventory.Instance?.ResetProgress();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
     public void Instructions(){
         SceneSound();
+        StartCoroutine(SoundDelay());
         PlayerInventory.Instance?.ResetProgress();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Instructions");
     }
