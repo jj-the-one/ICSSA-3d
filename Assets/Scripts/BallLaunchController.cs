@@ -12,6 +12,7 @@ public class BallLaunchController : MonoBehaviour
     [SerializeField] private Rigidbody ballRigidbody;
     [SerializeField] private Slider powerSlider;
     [SerializeField] private Button kickButton;
+    [SerializeField] private AudioSource KickSound;
 
     [Header("Launch")]
     [SerializeField] private float maxLaunchSpeed = 20f;
@@ -42,6 +43,7 @@ public class BallLaunchController : MonoBehaviour
     }
     IEnumerator LaunchAfterDelay(Vector3 direction, float power, Vector2 spinOffset){
         yield return new WaitForSeconds(kickDelay);
+        KickSound.PlayOneShot(KickSound.clip);
         ballRigidbody.velocity = direction * (power * maxLaunchSpeed);
         if (ballSpin != null) ballSpin.ApplyKickSpin(spinOffset, direction, power);
         OnBallLaunched?.Invoke();

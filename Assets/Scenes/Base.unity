@@ -1533,6 +1533,7 @@ MonoBehaviour:
   ballRigidbody: {fileID: 0}
   powerSlider: {fileID: 1312962885}
   kickButton: {fileID: 1513825177}
+  KickSound: {fileID: 3912695074114571243, guid: b7e86fbbb5d07dc41aa82887396e1d91, type: 3}
   maxLaunchSpeed: 90
   kickDelay: 0
 --- !u!1 &1312962883
