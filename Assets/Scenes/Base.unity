@@ -1534,7 +1534,7 @@ MonoBehaviour:
   powerSlider: {fileID: 1312962885}
   kickButton: {fileID: 1513825177}
   maxLaunchSpeed: 90
-  kickDelay: 0.5
+  kickDelay: 0
 --- !u!1 &1312962883
 GameObject:
   m_ObjectHideFlags: 0
