@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2980000893927643088
+--- !u!1 &4437828969516544146
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1893900634274876522}
-  - component: {fileID: 4040586813564643414}
+  - component: {fileID: 6566568199259023166}
+  - component: {fileID: 6789730021807255926}
   m_Layer: 0
-  m_Name: Line Target
+  m_Name: Line Renderer?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1893900634274876522
+--- !u!4 &6566568199259023166
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2980000893927643088}
+  m_GameObject: {fileID: 4437828969516544146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.10000001, z: 7.77}
@@ -32,14 +32,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4434753634044378395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &4040586813564643414
+--- !u!120 &6789730021807255926
 LineRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2980000893927643088}
+  m_GameObject: {fileID: 4437828969516544146}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -76,7 +76,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 5}
+  - {x: 0, y: 0, z: 4}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -84,8 +84,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.209301
-        value: 0.2439022
+        time: 0.32790834
+        value: 0.25203222
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -213,7 +213,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 77d0b00bd45ddc84eae1606b4748ffe4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1893900634274876522}
+      addedObject: {fileID: 6566568199259023166}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77d0b00bd45ddc84eae1606b4748ffe4, type: 3}
       insertIndex: -1
@@ -311,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 4434753634044378395}
   aimCamera: {fileID: 0}
+  LineRenderer: {fileID: 6789730021807255926}
   kickAxis: {x: 0, y: 0, z: 1}
   aimPlaneDistance: 10
   isAiming: 0

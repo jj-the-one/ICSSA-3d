@@ -13,7 +13,6 @@ public class BallLaunchController : MonoBehaviour
     [SerializeField] private Slider powerSlider;
     [SerializeField] private Button kickButton;
     [SerializeField] private AudioSource KickSound;
-    [SerializeField] private LineRenderer LineRenderer;
 
     [Header("Launch")]
     [SerializeField] private float maxLaunchSpeed = 20f;

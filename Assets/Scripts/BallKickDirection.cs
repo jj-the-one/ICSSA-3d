@@ -9,6 +9,7 @@ public class BallKickDirection : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform ball;
     [SerializeField] private Camera aimCamera;
+    [SerializeField] private LineRenderer LineRenderer;
 
     [Header("Aim Plane")]
     [SerializeField] private Vector3 kickAxis = Vector3.forward; // direction the goal faces
