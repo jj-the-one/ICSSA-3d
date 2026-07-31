@@ -9,7 +9,8 @@ public class BallKickDirection : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform ball;
     [SerializeField] private Camera aimCamera;
-    [SerializeField] private LineRenderer LineRenderer;
+    [SerializeField] private LineRenderer lineRenderer;
+    public float EstimatedZ = 23f;
 
     [Header("Aim Plane")]
     [SerializeField] private Vector3 kickAxis = Vector3.forward; // direction the goal faces
@@ -31,6 +32,13 @@ public class BallKickDirection : MonoBehaviour
     }
     void Update(){
         if (!isAiming || directionConfirmed) return;
+        //line renderer part
+        Vector3 arrowcursor = Input.mousePosition;
+        arrowcursor.z = EstimatedZ;
+        Vector3 endpos = Camera.main.ScreenToWorldPoint(arrowcursor);
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, endpos);
+
         if (Input.GetMouseButtonDown(0))
             TryConfirmDirection();
     }

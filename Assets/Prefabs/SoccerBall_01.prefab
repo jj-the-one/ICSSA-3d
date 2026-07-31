@@ -311,7 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 4434753634044378395}
   aimCamera: {fileID: 0}
-  LineRenderer: {fileID: 6789730021807255926}
+  lineRenderer: {fileID: 6789730021807255926}
+  EstimatedZ: 23
   kickAxis: {x: 0, y: 0, z: 1}
   aimPlaneDistance: 10
   isAiming: 0
